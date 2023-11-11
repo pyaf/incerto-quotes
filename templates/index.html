@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+
+.quote {
+    font-size: 1.5em; /* Makes the text larger */
+    font-style: italic; /* Optional: Makes the text italic */
+    text-align: center; /* Centers the text */
+    margin: 50px auto; /* Adds space around the quote */
+    padding: 0 40px; /* Adds padding to prevent overlap */
+    position: relative;
+    line-height: 1.4;
+    max-width: 600px; /* Adjust the max-width as per your design */
+    color: grey; /* Change color as needed */
+}
+
+
+.quote::before, .quote::after {
+    font-size: 2em; /* Makes the quotation marks larger */
+    color: #CCCCCC; /* Change color as needed */
+    position: absolute; /* Positions the quotation marks */
+    top: 0; /* Aligns with the top of the block */
+}
+
+.quote::before {
+    content: open-quote; /* For the opening quote */
+    left: 10px; /* Adjust the position of the opening quote */
+    transform: translateX(-100%);
+}
+
+.quote::after {
+    content: close-quote; /* For the closing quote */
+    right: 10px; /* Adjust the position of the closing quote */
+    transform: translateX(100%);
+}
+
+/* Optional: Style for smaller screens */
+@media screen and (max-width: 600px) {
+    .quote {
+        font-size: 1.2em;
+        margin: 30px 20px;
+    }
+}
+
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incerto Quotes</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+        <div class="content container mt-4 text-center">
+            <h1><a href="https://www.penguinrandomhouse.com/series/INO/incerto">Incerto</a> Quotes</h1>
+        <br>
+        <blockquote class="quote">
+        {{ quote }}
+        </blockquote>
+    </div>
+
+
+
+  <!-- Footer -->
+    <footer class="bg-primary text-white text-center py-3">
+        <div class="container">
+            <p>Made with ❤️ by <a style="color:white" href="https://github.com/pyaf">pyaf</a></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

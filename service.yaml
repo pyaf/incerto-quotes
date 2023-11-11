@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: incerto-quote-app-service
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+  selector:
+    app: incerto-quote-app
+

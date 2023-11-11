@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: incerto-quote-app-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: incerto-quote-app
+  template:
+    metadata:
+      labels:
+        app: incerto-quote-app
+    spec:
+      containers:
+      - name: incerto-quote-app
+        image: pyaf/incerto-quote-app:v1
+        ports:
+        - containerPort: 80
+
